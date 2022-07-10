@@ -1,0 +1,1 @@
+{"mappings":"AAEA;EACE,OAHM","sources":["careerfoundry/myflix-client/src/index.scss"],"sourcesContent":["$color: steelblue;\r\n\r\n.my-flix {\r\n  color: $color;\r\n}"],"names":[],"version":3,"file":"index.8d6d7a49.css.map","sourceRoot":"/__parcel_source_root/"}
