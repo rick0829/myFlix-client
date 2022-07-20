@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rick0829/myFlix-client/issues"
   },
-  "homepage": "https://github.com/rick0829/myFlix-client#readme"
+  "homepage": "https://github.com/rick0829/myFlix-client#readme",
+  "dependencies": {
+    "react-bootstrap": "^2.4.0"
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import MovieCard from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
@@ -13,6 +14,17 @@ export class MainView extends React.Component {
     };
   }
 
+  componentDidMount(){
+    axios.get('https://stormy-oasis-21364.herokuapp.com/movies')
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 
   setSelectedMovie(newSelectedMovie) {
     this.setState({
