@@ -7,14 +7,16 @@ export class MainView extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: [{ _id: 1, Title: 'Inception', Description: 'desc1...', ImagePath: '...' },
-      { _id: 2, Title: 'The Shawshank Redemption', Description: 'desc2...', ImagePath: '...' },
-      { _id: 3, Title: 'Gladiator', Description: 'desc3...', ImagePath: '...' }],
+      movies: [],
       selectedMovie: null
     };
   }
 
+<<<<<<< Updated upstream
   componentDidMount(){
+=======
+  componentDidMount() {
+>>>>>>> Stashed changes
     axios.get('https://stormy-oasis-21364.herokuapp.com/movies')
       .then(response => {
         this.setState({
@@ -25,6 +27,11 @@ export class MainView extends React.Component {
         console.log(error);
       });
   }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 
   setSelectedMovie(newSelectedMovie) {
     this.setState({
@@ -35,15 +42,14 @@ export class MainView extends React.Component {
   render() {
     const { movies, selectedMovie } = this.state;
 
-
-    if (movies.length === 0) return <div className="main-view">The list is empty!</div>;
+    if (movies.length === 0) return <div className="main-view" />;
 
     return (
       <div className="main-view">
         {selectedMovie
           ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
           : movies.map(movie => (
-            <MovieCard key={movie._id} movie={movie} onMovieClick={(movie) => { this.setSelectedMovie(movie) }} />
+            <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
           ))
         }
       </div>
